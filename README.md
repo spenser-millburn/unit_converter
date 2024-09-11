@@ -1,20 +1,18 @@
-# CLI Unit Converter
+# Unit Converter CLI
 
-This is a command-line interface (CLI) application for converting units of length, weight, and temperature using the `typer` library.
+This is a command-line interface (CLI) application for converting units of length, weight, temperature, and currency. The application is built using Python and the Typer library.
 
 ## Installation
 
 1. Clone the repository:
    ```
    git clone <repository_url>
+   cd <repository_directory>
    ```
-2. Navigate to the project directory:
+
+2. Install the required dependencies:
    ```
-   cd <project_directory>
-   ```
-3. Install the required dependencies:
-   ```
-   pip install typer unit_converter
+   pip install typer
    ```
 
 ## Usage
@@ -26,29 +24,80 @@ python cli.py
 
 ### Commands
 
-- Convert Length:
-  ```
-  python cli.py convert-length <value> <from_unit> <to_unit>
-  ```
-  Example:
-  ```
-  python cli.py convert-length 100 meters feet
-  ```
+#### Convert Length
+Convert between different units of length.
+```
+python cli.py convert-length-cmd <value> <from_unit> <to_unit>
+```
+Example:
+```
+python cli.py convert-length-cmd 100 meters kilometers
+```
 
-- Convert Weight:
-  ```
-  python cli.py convert-weight <value> <from_unit> <to_unit>
-  ```
-  Example:
-  ```
-  python cli.py convert-weight 70 kilograms pounds
-  ```
+#### Convert Weight
+Convert between different units of weight.
+```
+python cli.py convert-weight-cmd <value> <from_unit> <to_unit>
+```
+Example:
+```
+python cli.py convert-weight-cmd 1000 grams kilograms
+```
 
-- Convert Temperature:
-  ```
-  python cli.py convert-temperature <value> <from_unit> <to_unit>
-  ```
-  Example:
-  ```
-  python cli.py convert-temperature 100 celsius fahrenheit
-  ```
+#### Convert Temperature
+Convert between different units of temperature.
+```
+python cli.py convert-temperature-cmd <value> <from_unit> <to_unit>
+```
+Example:
+```
+python cli.py convert-temperature-cmd 100 celsius fahrenheit
+```
+
+#### Convert Currency
+Convert between different currencies.
+```
+python cli.py convert-currency-cmd <value> <from_currency> <to_currency>
+```
+Example:
+```
+python cli.py convert-currency-cmd 100 USD EUR
+```
+
+### Supported Units
+
+#### Length
+- meters
+- kilometers
+- centimeters
+- millimeters
+- miles
+- yards
+- feet
+- inches
+
+#### Weight
+- kilograms
+- grams
+- milligrams
+- pounds
+- ounces
+
+#### Temperature
+- celsius
+- fahrenheit
+- kelvin
+
+#### Currency
+- USD (United States Dollar)
+- EUR (Euro)
+- GBP (British Pound)
+- INR (Indian Rupee)
+- AUD (Australian Dollar)
+- CAD (Canadian Dollar)
+- JPY (Japanese Yen)
+- CNY (Chinese Yuan)
+
+## License
+
+This project is licensed under the MIT License.
